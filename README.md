@@ -96,7 +96,9 @@
 
 
 ## Literature Review
-- https://arxiv.org/abs/2503.13733
+- (article provided on Moodle)[https://arxiv.org/abs/2503.13733]
+- (connected papers)[https://www.connectedpapers.com/main/6cfb2cd3762c9f1c21d2761187e2d3b9c73c8280/CoDet%20M4%3A-Detecting-Machine%20Generated-Code-in-Multi%20Lingual%2C-Multi%20Generator-and-Multi%20Domain-Settings/graph]
+
 
 ## Questions to ask
 - should we tackle all 3 subtasks or should we just choose one / two?
