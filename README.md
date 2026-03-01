@@ -33,5 +33,48 @@ This task is formed as a binary classification problem, classifying the given co
 
 ---
 
-## Models evaluated 
-###
+## Implementation
+
+### Models Evaluated
+- TF-IDF with Logistic Regression
+- CodeBERT
+- GraphCodeBERT
+
+### Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- Macro-F1 (main comparison metric)
+
+Macro-F1 is emphasized due to potential class imbalance and multilingual variability.
+
+---
+
+## Key Findings
+
+### In-Distribution (Seen Languages)
+- TF-IDF baseline performs strongly
+- CodeBERT achieves near-perfect performance
+- Neural models significantly outperform classical methods
+
+### Cross-Language Generalization (Unseen Languages)
+- Severe performance drop across all models
+- Surface-level cues do not transfer well
+- Neural models are more robust but still struggle
+
+### Structural Modeling
+- GraphCodeBERT consistently improves performance over CodeBERT on most unseen languages
+- Improvements are moderate and language-dependent
+- PHP remains especially difficult
+
+### Length Bias
+Behavioral analysis on a large unlabeled dataset shows:
+- Longer code snippets are more likely to be predicted as machine-generated
+- TF-IDF exhibits the strongest bias
+- GraphCodeBERT reduces but does not eliminate this effect
+
+### Limitations
+- Training languages limited to three (Python, Java, C++)
+- Colab environment constrained batch size and training time
+- Binary classification only (no hybrid/partially-assisted detection)
+- No adversarial robustness testing
